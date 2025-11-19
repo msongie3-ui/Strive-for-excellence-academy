@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Trial - Strive for Excellence Academy</title>
+    <style>
+        .contact-hero { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 150px 0 80px; color: white; text-align: center; }
+        .contact-form { padding: 80px 0; max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        .submit-btn { background: #e74c3c; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 1.1rem; cursor: pointer; width: 100%; }
+        .submit-btn:hover { background: #c0392b; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Strive for Excellence Academy</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="subjects.html">Subjects</a></li>
+                    <li><a href="method.html">Our Method</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="btn">Free Trial</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Book Your Free Trial Session</h1>
+            <p>Experience our teaching method risk-free</p>
+        </div>
+    </section>
+
+    <section class="contact-form container">
+        <form action="https://formspree.io/f/your-email-here" method="POST">
+            <div class="form-group">
+                <label for="name">Student's Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="grade">Grade Level *</label>
+                <select id="grade" name="grade" required>
+                    <option value="">Select Grade</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+                    <option value="11">Grade 11</option>
+                    <option value="12">Grade 12</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject of Interest *</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="maths">Mathematics</option>
+                    <option value="science">Science</option>
+                    <option value="both">Both Maths & Science</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="parent">Parent/Guardian Name *</label>
+                <input type="text" id="parent" name="parent" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Specific Learning Goals or Challenges</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us what you'd like to achieve..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Request Free Trial Session</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Strive for Excellence Academy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
