@@ -9,7 +9,7 @@
         body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
         
         /* Header */
-        header { background: #2c3e50; color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; }
+        header { background: #2c3e50; color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
         .container { width: 90%; max-width: 1200px; margin: 0 auto; }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: bold; }
@@ -24,8 +24,9 @@
             color: white;
             padding: 150px 0 100px;
             text-align: center;
+            margin-top: 60px;
         }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
         .btn { 
             display: inline-block; 
@@ -36,12 +37,13 @@
             border-radius: 5px; 
             font-weight: bold;
             transition: background 0.3s;
+            margin: 5px;
         }
         .btn:hover { background: #c0392b; }
         
         /* Benefits Section */
         .benefits { padding: 80px 0; background: #f8f9fa; }
-        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; color: #2c3e50; }
         .benefits-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -53,11 +55,14 @@
             border-radius: 10px; 
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
-        .benefit-card h3 { color: #2c3e50; margin-bottom: 1rem; }
+        .benefit-card:hover { transform: translateY(-5px); }
+        .benefit-card h3 { color: #2c3e50; margin-bottom: 1rem; font-size: 1.3rem; }
+        .benefit-icon { font-size: 2.5rem; margin-bottom: 1rem; }
         
         /* Footer */
-        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; }
+        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem 0; margin-top: 2rem; }
     </style>
 </head>
 <body>
@@ -82,7 +87,10 @@
         <div class="container">
             <h1>Master Maths & Science, Unlock Your Future</h1>
             <p>Affordable, strategic online tutoring for high school students that builds confidence and achieves results</p>
-            <a href="contact.html" class="btn">Book Your Free Trial Session</a>
+            <div>
+                <a href="contact.html" class="btn">Book Your Free Trial Session</a>
+                <a href="subjects.html" class="btn" style="background: #3498db;">View Our Subjects</a>
+            </div>
         </div>
     </section>
 
@@ -92,19 +100,23 @@
             <h2 class="section-title">Why Choose Our Academy?</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h3>💰 Affordable Excellence</h3>
+                    <div class="benefit-icon">💰</div>
+                    <h3>Affordable Excellence</h3>
                     <p>Premium tutoring that fits your family's budget without compromising quality</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>🎯 Learn How to Learn</h3>
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Learn How to Learn</h3>
                     <p>We teach powerful strategies to understand complex concepts, not just memorize</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>📚 Exam Ready</h3>
+                    <div class="benefit-icon">📚</div>
+                    <h3>Exam Ready</h3>
                     <p>Structured revision, mock tests, and marked homework ensure you're prepared</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>🚀 Inspired to Succeed</h3>
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Inspired to Succeed</h3>
                     <p>Building confidence, motivation, and greatness in every student</p>
                 </div>
             </div>
@@ -115,6 +127,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Strive for Excellence Academy. All rights reserved.</p>
+            <p>Email: contact@striveforexcellence.com | Phone: (123) 456-7890</p>
         </div>
     </footer>
 </body>
